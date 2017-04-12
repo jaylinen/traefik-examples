@@ -1,0 +1,25 @@
+logLevel = "DEBUG"
+
+[web]
+address = ":8088"
+
+defaultEntryPoints = ["http"]
+
+[entryPoints]
+  [entryPoints.http]
+  address = ":80"
+
+[file]
+
+[frontends]
+  [frontends.koskenlaskija]
+    entrypoints = ["http"]
+    backend = "koskenlaskija"
+    passHostHeader = true
+      [frontends.koskenlaskija.routes.test_1]
+      rule = "Path: /, /{*}"
+
+[backends]
+  [backends.koskenlaskija]
+    [backends.koskenlaskija.servers.server1]
+    url = "http://koskenlaskija:80"

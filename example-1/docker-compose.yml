@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  proxy:
+    image: traefik:v1.2.1
+    ports:
+      - "80:80"
+      - "8088:8088"
+    volumes:
+      - "./traefik.toml:/etc/traefik/traefik.toml"
+
+  koskenlaskija:
+    image: nginx:1.11.8-alpine
+    volumes:
+      - "./koskenlaskija:/usr/share/nginx/html"

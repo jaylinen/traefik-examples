@@ -1,0 +1,41 @@
+version: '2'
+
+services:
+  proxy:
+    image: traefik:v1.2.1
+    ports:
+      - "80:80"
+      - "8088:8088"
+    volumes:
+      - "./traefik.toml:/etc/traefik/traefik.toml"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+
+  aura:
+    image: nginx:1.11.8-alpine
+    volumes:
+      - "./aura:/usr/share/nginx/html"
+    labels:
+      - "traefik.frontend.rule=PathPrefixStrip:/aura"
+      - "traefik.port=80"
+      - "traefik.backend=aura"
+      - "traefik.frontend.entryPoints=http"
+
+  oltermanni:
+    image: nginx:1.11.8-alpine
+    volumes:
+      - "./oltermanni:/usr/share/nginx/html"
+    labels:
+      - "traefik.frontend.rule=PathPrefixStrip:/oltermanni"
+      - "traefik.port=80"
+      - "traefik.backend=oltermanni"
+      - "traefik.frontend.entryPoints=http"
+
+  salaneuvos:
+    image: nginx:1.11.8-alpine
+    volumes:
+      - "./salaneuvos:/usr/share/nginx/html"
+    labels:
+      - "traefik.frontend.rule=PathPrefixStrip:/salaneuvos"
+      - "traefik.port=80"
+      - "traefik.backend=salaneuvos"
+      - "traefik.frontend.entryPoints=http"
