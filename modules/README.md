@@ -25,6 +25,7 @@ Reverse Proxyjen ilkeä pikkuveli
   - Reititys havaitsee konttien syntymät ja kuolemat
 - Kohtuullisen nopea (kuitenkin hitaampi kuin NGINX)
 - Helppo HTTPS-tuki Let's Encryptillä
+- Paska dokumentaatio (tämä ei ole etu)
 
 ---
 
