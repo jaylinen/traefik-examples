@@ -39,3 +39,16 @@ services:
       - "traefik.port=80"
       - "traefik.backend=salaneuvos"
       - "traefik.frontend.entryPoints=http"
+
+  emmental:
+    build:
+      context: './emmental'
+    volumes:
+      - './emmental:/code'
+    environment:
+      - PYTHONUNBUFFERED=0
+    labels:
+      - "traefik.frontend.rule=PathPrefixStrip:/emmental"
+      - "traefik.port=5000"
+      - "traefik.backend=emmental"
+      - "traefik.frontend.entryPoints=http"
