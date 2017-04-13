@@ -1,0 +1,30 @@
+version: '2'
+
+services:
+  emmental0:
+    build: 
+      context: '.'
+    ports:
+      - '5000:5000'
+    volumes:
+      - '.:/code'
+    environment:
+      - PYTHONUNBUFFERED=0
+  emmental1:
+    build: 
+      context: '.'
+    ports:
+      - '5001:5000'
+    volumes:
+      - '.:/code'
+    environment:
+      - PYTHONUNBUFFERED=0
+  emmental2:
+    build: 
+      context: '.'
+    ports:
+      - '5002:5000'
+    volumes:
+      - '.:/code'
+    environment:
+      - PYTHONUNBUFFERED=0
