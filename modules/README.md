@@ -23,10 +23,10 @@ Reverse Proxyjen ilkeä pikkuveli
 
 - Toimii dynaamisesti, kuuntelee mm. Dockerin Socketia
   - Reititys havaitsee konttien syntymät ja kuolemat
-  - Konfiguraatio voidaan ladata lennossa
+  - Konfiguraatio voidaan päivittää lennossa
 - Kohtuullisen nopea (kuitenkin hitaampi kuin NGINX)
 - Helppo HTTPS-tuki Let's Encryptillä
-- Paska dokumentaatio (tämä ei ole etu)
+- Kehno dokumentaatio (tämä ei ole etu)
 
 ---
 
@@ -60,4 +60,7 @@ Notes:
 
 ---
 
-## Demo
+## Demoja
+
+- Træfik proxyna
+- Træfik api gatewayna
