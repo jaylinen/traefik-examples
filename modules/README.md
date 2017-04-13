@@ -21,8 +21,9 @@ Reverse Proxyjen ilkeä pikkuveli
 
 <!-- .slide: data-state="primary-theme" -->
 
-- Toimii dynaamisesti, kuuntelee Dockerin Socketia
+- Toimii dynaamisesti, kuuntelee mm. Dockerin Socketia
   - Reititys havaitsee konttien syntymät ja kuolemat
+  - Konfiguraatio voidaan ladata lennossa
 - Kohtuullisen nopea (kuitenkin hitaampi kuin NGINX)
 - Helppo HTTPS-tuki Let's Encryptillä
 - Paska dokumentaatio (tämä ei ole etu)
@@ -33,7 +34,7 @@ Reverse Proxyjen ilkeä pikkuveli
 
 <!-- .slide: data-state="primary-theme" -->
 
-- Entypoint
+- Entrypoint
 - Frontend
 - Backend
 
@@ -53,7 +54,7 @@ Notes:
 
 ![Terminologia](https://github.com/containous/traefik/blob/master/docs/img/architecture.png?raw=true)
 
-- Entypoint
+- Entrypoint
 - Frontend
 - Backend
 
