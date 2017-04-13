@@ -12,7 +12,7 @@ Reverse Proxyjen ilkeä pikkuveli
 - Konfiguroidaan TOML:illa
 - Ensimmäinen versio kesäkuussa 2016
 - Pääkehittäjä Emily Vauge / Containous
-- Helmikuussa 2017 1 miljoona kehitystyöhön
+- Helmikuussa 2017 1 miljoona € kehitystyöhön
 - Versiot on nimetty juustojen mukaan Reblochon, Camembert, Morbier
 
 ---
@@ -21,7 +21,10 @@ Reverse Proxyjen ilkeä pikkuveli
 
 <!-- .slide: data-state="primary-theme" -->
 
-- foobar
+- Toimii dynaamisesti, kuuntelee Dockerin Socketia
+  - Reititys havaitsee konttien syntymät ja kuolemat
+- Kohtuullisen nopea (kuitenkin hitaampi kuin NGINX)
+- Helppo HTTPS-tuki Let's Encryptillä
 
 ---
 
@@ -39,7 +42,7 @@ Notes:
 
 - Entrypoint: HTTP(S) ja portin numero
 - Frontend: Kasa sääntöjä joilla pyynnöt ohjataan entrypointista bäkkärille
-- Backend: Bäckend on itse palvelu
+- Backend: backend on itse palvelu
 
 ---
 
