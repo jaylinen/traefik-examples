@@ -1,0 +1,5 @@
+node_modules
+
+# Ignore pdf export directories
+hy-pdfs
+pdfs

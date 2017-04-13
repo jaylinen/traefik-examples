@@ -1,0 +1,416 @@
+/**
+ * Gofore styles for other than Reveal.js files
+ */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+body {
+  background: #343f68;
+  background-color: #343f68;
+  font-family: "Lato", "Source Sans Pro", Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  color: #fff;
+}
+
+::selection {
+  color: #343f68;
+  background: #ff8551;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  color: #343f68;
+  background: #ff8551;
+  text-shadow: none;
+}
+
+.column {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.schedule-section {
+  margin-top: 40px;
+}
+
+.schedule-section table tr td:first-of-type {
+  white-space: nowrap;
+}
+
+.toc {
+  border-top: 1px solid #fff;
+  padding: 20px 0;
+}
+
+.toc__title {
+  color: #fff;
+}
+
+.menu {
+  margin-bottom: 0;
+}
+
+.toc-section {
+  border-top: 1px solid #fff;
+  padding: 20px 0;
+}
+
+.toc-section__title {
+  color: #fff;
+}
+
+.training-module {
+  margin-top: 30px;
+}
+
+.training-module__title {
+  margin-bottom: 5px;
+}
+
+.training-module__meta {
+  color: #787da0;
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.training-module__summary {
+  margin: 0;
+}
+
+.prerequisites {
+  margin: 20px 0 30px 0;
+}
+
+.prerequisites__description {
+  margin: 5px 0;
+}
+
+.prerequisites__list {
+  margin-bottom: 0;
+}
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 20px 0;
+  color: #ff8551;
+  font-family: "Lato", "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  text-shadow: none;
+  word-wrap: break-word;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.6em;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h1 {
+  text-shadow: none;
+}
+
+/*********************************************
+ * OTHER
+ *********************************************/
+p {
+  margin: 20px 0;
+  line-height: 1.3;
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+ol,
+dl,
+ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 2em 1em;
+  padding: 0 0 0 0.5em;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ul,
+ul ul,
+ul ul ul {
+  list-style-type: none;
+}
+
+ul li::before,
+ul ul li::before,
+ul ul ul li::before {
+  content: "\2022";
+  color: #787da0;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  display: block;
+  margin-left: 40px;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 40px;
+}
+
+q,
+blockquote {
+  quotes: none;
+}
+
+blockquote {
+  display: block;
+  position: relative;
+  width: 70%;
+  margin: 20px auto;
+  padding: 5px;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+blockquote p:first-child,
+blockquote p:last-child {
+  display: inline-block;
+}
+
+q {
+  font-style: italic;
+}
+
+pre {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: 20px auto;
+  text-align: left;
+  font-size: 0.55em;
+  font-family: monospace;
+  line-height: 1.2em;
+  word-wrap: break-word;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+}
+
+code {
+  font-family: monospace;
+}
+
+pre code {
+  display: block;
+  padding: 5px;
+  overflow: auto;
+  max-height: 800px;
+  word-wrap: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table th {
+  font-weight: bold;
+}
+
+table th,
+table td {
+  text-align: left;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border-bottom: 1px solid;
+  vertical-align: top;
+}
+
+table th[align="center"],
+table td[align="center"] {
+  text-align: center;
+}
+
+table th[align="right"],
+table td[align="right"] {
+  text-align: right;
+}
+
+table tbody tr:last-child th,
+table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+sup {
+  vertical-align: super;
+}
+
+sub {
+  vertical-align: sub;
+}
+
+small {
+  display: inline-block;
+  font-size: 0.6em;
+  line-height: 1.2em;
+  vertical-align: top;
+}
+
+small * {
+  vertical-align: top;
+}
+
+/*********************************************
+ * LINKS
+ *********************************************/
+a {
+  color: #ff8551;
+  text-decoration: none;
+  -webkit-transition: color .15s ease;
+  -moz-transition: color .15s ease;
+  transition: color .15s ease;
+}
+
+a:hover {
+  color: #ffdaca;
+  text-shadow: none;
+  border: none;
+}
+
+/*********************************************
+ * OTHER STYLES
+ *********************************************/
+footer {
+  padding: 2em 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+footer .logo {
+  width: 15rem;
+  height: 3rem;
+  background-image: url("../images/png/gofore_logo_white.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.secondary-theme body {
+  background-color: #fff;
+  color: #343f68;
+}
+
+.secondary-theme ::selection {
+  color: #fff;
+  background: #ff8551;
+}
+
+.secondary-theme ::-moz-selection {
+  color: #fff;
+  background: #ff8551;
+}
+
+.secondary-theme h1,
+.secondary-theme h2,
+.secondary-theme h3,
+.secondary-theme h4,
+.secondary-theme h5,
+.secondary-theme h6 {
+  color: #ff8551;
+}
+
+.secondary-theme a {
+  color: #ff8551;
+}
+
+.secondary-theme a:hover {
+  color: #ffdaca;
+}
+
+.secondary-theme ul li::before,
+.secondary-theme ul ul li::before,
+.secondary-theme ul ul ul li::before {
+  color: #dedee2;
+}
+
+.secondary-theme footer .logo {
+  background-image: url("../images/png/gofore_logo_orange.png");
+}
+
+.tertiary-theme body {
+  background-color: #ff8551;
+  color: #fff;
+}
+
+.tertiary-theme ::selection {
+  color: #ff8551;
+  background: #343f68;
+}
+
+.tertiary-theme ::-moz-selection {
+  color: #ff8551;
+  background: #343f68;
+}
+
+.tertiary-theme h1,
+.tertiary-theme h2,
+.tertiary-theme h3,
+.tertiary-theme h4,
+.tertiary-theme h5,
+.tertiary-theme h6 {
+  color: #343f68;
+}
+
+.tertiary-theme a {
+  color: #343f68;
+}
+
+.tertiary-theme a:hover {
+  color: #787da0;
+}
+
+.tertiary-theme ul li::before,
+.tertiary-theme ul ul li::before,
+.tertiary-theme ul ul ul li::before {
+  color: #787da0;
+}
+
+.tertiary-theme footer .logo {
+  background-image: url("../images/png/gofore_logo_dark_blue.png");
+}

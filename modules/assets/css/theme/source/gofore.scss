@@ -1,0 +1,310 @@
+/**
+ * Gofore theme for reveal.js.
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(../../revealjs/lib/font/source-sans-pro/source-sans-pro.css);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+
+// Gofore colors
+// See https://extra.gofore.com/confluence/display/GOF/Gofore-logot%2C+graafinen+ohjeisto
+$primaryColor1: #ff8551; // orange
+$primaryColor2: #343f68; // blue
+$primaryColor3: #fff; // white
+$secondaryColor1: #ffdaca; // light orange
+$secondaryColor2: #787da0; // light blue
+$secondaryColor3: #dedee2; // light grey
+$tertiaryColor1: lighten($secondaryColor1, 5%);
+$tertiaryColor2: lighten($secondaryColor2, 25%);
+$tertiaryColor3: lighten($secondaryColor3, 5%);
+
+
+// Override theme settings (see ../template/settings.scss)
+
+// Background of the presentation
+$backgroundColor: $primaryColor2;
+
+// Primary/body text
+$mainFont: 'Lato', 'Source Sans Pro', Helvetica, sans-serif;
+$mainFontSize: 42px;
+$mainColor: $primaryColor3;
+
+// Headings
+$headingFont: 'Lato', 'Source Sans Pro', Helvetica, sans-serif;
+$headingColor: $primaryColor1;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingTextShadow: none;
+$headingFontWeight: 600;
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+// Links and actions
+$linkColor: $primaryColor1;
+$linkColorHover:$secondaryColor1;
+
+// Text selection
+$selectionBackgroundColor: $primaryColor1;
+$selectionColor: $primaryColor2;
+
+section.has-light-background {
+  &, h1, h2, h3, h4, h5, h6 {
+    color: $primaryColor2;
+  }
+}
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+// Custom styles go here
+
+footer {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+
+  .logo {
+    width: 15rem;
+    height: 3rem;
+    background-image: url("../../images/png/gofore_logo_white.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+
+// Theme overrides that cannot be controlled with variables go here
+// If you override anything, first copy the scss from assets/revealjs/css/theme/template/theme.scss and then modify it
+// according to your needs.
+
+// Links
+.reveal .roll span:after {
+  color: $primaryColor2;
+  background: $primaryColor1;
+}
+
+// Images
+.reveal section img {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+// Other
+.reveal ul,
+.reveal ul ul,
+.reveal ul ul ul {
+  list-style-type: none;
+
+  li::before {
+    content: "\2022";
+    color: $secondaryColor2;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+}
+
+.reveal pre code {
+  max-height: 800px;
+}
+
+
+// Other themes (use reveal.js's data-state to use these)
+
+.secondary-theme {
+  body {
+    background-color: $primaryColor3;
+  }
+
+  .reveal {
+    color: $primaryColor2;
+  }
+
+  ::selection {
+    color: $primaryColor3;
+    background: $primaryColor1;
+  }
+
+  ::-moz-selection {
+    color: $primaryColor3;
+    background: $primaryColor1;
+  }
+
+  .reveal h1,
+  .reveal h2,
+  .reveal h3,
+  .reveal h4,
+  .reveal h5,
+  .reveal h6 {
+    color: $primaryColor1;
+  }
+
+  .reveal a {
+    color: $primaryColor1;
+  }
+
+  .reveal a:hover {
+    color: $secondaryColor1;
+  }
+
+  .reveal .roll span:after {
+    color: $primaryColor1;
+    background: $primaryColor2;
+  }
+
+  .reveal ul,
+  .reveal ul ul,
+  .reveal ul ul ul {
+    li::before {
+      color: $secondaryColor3;
+    }
+  }
+
+  footer {
+    .logo {
+      background-image: url("../../images/png/gofore_logo_orange.png");
+    }
+  }
+
+  .reveal .controls .navigate-left,
+  .reveal .controls .navigate-left.enabled {
+    border-right-color: $primaryColor1;
+  }
+
+  .reveal .controls .navigate-right,
+  .reveal .controls .navigate-right.enabled {
+    border-left-color: $primaryColor1;
+  }
+
+  .reveal .controls .navigate-up,
+  .reveal .controls .navigate-up.enabled {
+    border-bottom-color: $primaryColor1;
+  }
+
+  .reveal .controls .navigate-down,
+  .reveal .controls .navigate-down.enabled {
+    border-top-color: $primaryColor1;
+  }
+
+  .reveal .controls .navigate-left.enabled:hover {
+    border-right-color: $secondaryColor1;
+  }
+
+  .reveal .controls .navigate-right.enabled:hover {
+    border-left-color: $secondaryColor1;
+  }
+
+  .reveal .controls .navigate-up.enabled:hover {
+    border-bottom-color: $secondaryColor1;
+  }
+
+  .reveal .controls .navigate-down.enabled:hover {
+    border-top-color: $secondaryColor1;
+  }
+}
+
+.tertiary-theme {
+  body {
+    background-color: $primaryColor1;
+  }
+
+  .reveal {
+    color: $primaryColor3;
+  }
+
+  ::selection {
+    color: $primaryColor1;
+    background: $primaryColor2;
+  }
+
+  ::-moz-selection {
+    color: $primaryColor1;
+    background: $primaryColor2;
+  }
+
+  .reveal h1,
+  .reveal h2,
+  .reveal h3,
+  .reveal h4,
+  .reveal h5,
+  .reveal h6 {
+    color: $primaryColor2;
+  }
+
+  .reveal a {
+    color: $primaryColor2;
+  }
+
+  .reveal a:hover {
+    color: $secondaryColor2;
+  }
+
+  .reveal .roll span:after {
+    color: $primaryColor2;
+    background: $primaryColor3;
+  }
+
+  .reveal ul,
+  .reveal ul ul,
+  .reveal ul ul ul {
+    li::before {
+      color: $secondaryColor2;
+    }
+  }
+
+  footer {
+    .logo {
+      background-image: url("../../images/png/gofore_logo_dark_blue.png");
+    }
+  }
+
+  .reveal .controls .navigate-left,
+  .reveal .controls .navigate-left.enabled {
+    border-right-color: $primaryColor2;
+  }
+
+  .reveal .controls .navigate-right,
+  .reveal .controls .navigate-right.enabled {
+    border-left-color: $primaryColor2;
+  }
+
+  .reveal .controls .navigate-up,
+  .reveal .controls .navigate-up.enabled {
+    border-bottom-color: $primaryColor2;
+  }
+
+  .reveal .controls .navigate-down,
+  .reveal .controls .navigate-down.enabled {
+    border-top-color: $primaryColor2;
+  }
+
+  .reveal .controls .navigate-left.enabled:hover {
+    border-right-color: $secondaryColor2;
+  }
+
+  .reveal .controls .navigate-right.enabled:hover {
+    border-left-color: $secondaryColor2;
+  }
+
+  .reveal .controls .navigate-up.enabled:hover {
+    border-bottom-color: $secondaryColor2;
+  }
+
+  .reveal .controls .navigate-down.enabled:hover {
+    border-top-color: $secondaryColor2;
+  }
+}
